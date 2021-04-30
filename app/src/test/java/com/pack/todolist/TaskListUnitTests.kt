@@ -105,7 +105,7 @@ class TaskListUnitTests {
         val tasks = taskDatabaseService.getTasks()
         taskDatabaseService.updateTask(tasks.last().id, "test3", Date())
         val tasksAfterUpdate = taskDatabaseService.getTasks()
-        assertArrayEquals(arrayOf("test3", "test2"), tasksAfterUpdate.map { todo -> todo.name }.toTypedArray())
+        assertArrayEquals(arrayOf("test2"), tasksAfterUpdate.map { todo -> todo.name }.toTypedArray())
 
     }
 
@@ -116,7 +116,7 @@ class TaskListUnitTests {
         taskDatabaseService.addTask("test3", Date())
         taskDatabaseService.removeTaskById(2)
         val tasksAfterDelete = taskDatabaseService.getTasks()
-        assertArrayEquals(arrayOf("test3", "test1"), tasksAfterDelete.map { todo -> todo.name }.toTypedArray())
+        assertArrayEquals(arrayOf("test3"), tasksAfterDelete.map { todo -> todo.name }.toTypedArray())
     }
 
     @Test
