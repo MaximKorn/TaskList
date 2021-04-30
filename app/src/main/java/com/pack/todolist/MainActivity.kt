@@ -159,7 +159,7 @@ class MainActivity : AppCompatActivity() {
             tableLayout.addView(tableRow)
         }
 
-        for (i in 1..tasks.size + 1) {
+        for (i in 1..tasks.size) {
             val tableRow = TableRow(this)
             val textView = TextView(this)
             val text = "$i. ${tasks[i - 1].name}"
