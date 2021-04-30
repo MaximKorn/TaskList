@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
             progressBar.visibility = View.GONE
         }
 
-        popupWindow.showAsDropDown(mainView, 150, 600, Gravity.CENTER)
+        popupWindow.showAsDropDown(mainView, 160, 600, Gravity.CENTER)
         popupWindow.isFocusable = true;
         popupWindow.update();
     }
@@ -135,7 +135,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        popupWindow.showAsDropDown(mainView, 120, 200, Gravity.START)
+        popupWindow.showAsDropDown(mainView, 90, 600, Gravity.START)
         popupWindow.isFocusable = true;
         popupWindow.update();
     }
@@ -159,7 +159,7 @@ class MainActivity : AppCompatActivity() {
             tableLayout.addView(tableRow)
         }
 
-        for (i in 1..tasks.size) {
+        for (i in 1..tasks.size + 1) {
             val tableRow = TableRow(this)
             val textView = TextView(this)
             val text = "$i. ${tasks[i - 1].name}"
